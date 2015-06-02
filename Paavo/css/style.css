@@ -1,9 +1,27 @@
 @charset "utf-8";
 /* CSS Document */
-
-/* by  Paavo*/
-body{ background:url(../img/bg5.jpg) no-repeat; background-attachment:fixed; background-size:cover;background-position:center;}
+*{ margin:0; padding:0; list-style:none;}
+a{ color:#fff; text-decoration: none; }
+body{ background:url(../img/bg5.jpg) no-repeat; background-attachment:fixed; background-size:cover;background-position:center;font-family: 'Open Sans','helvetica',arial,sans-serif; font-weight:300; color:#62686f;}
+h1,h2,h3,h4,h5,h6{ color:#333;font-weight:300;}
 .container{ width:960px; margin:0 auto;}
-.main-header{ width:960px; height:105px; background:url(../img/banner.jpg) no-repeat; margin:100px auto;background-size:cover; background-position:50% 50%; position:relative; padding-top:40px; padding-bottom:20px;}
+.main-header{ width:960px; height:105px; background:url(../img/banner.jpg) no-repeat; margin:100px auto 0px;background-size:cover; background-position:50% 50%; position:relative; padding-top:40px; padding-bottom:20px;}
 .main-header h1{ display:block; text-align:center; font-weight:300; font-size: 50px; font-family: 'Open Sans','helvetica',arial,sans-serif; text-shadow:0 1px raba(0,0,0,0.3); color:#fff; margin-bottom:20px;}
 .main-header__avatar{ width:130px; height:130px; display:block; margin:0 auto; border:3px solid white;border-radius:999px; box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.2); position:absolute; top:-70px; left:50%; margin-left:-65px; overflow:hidden;}
+.main-nav{ width:960px; height:40px;  margin:0 auto; background:#333; line-height:40px; }
+.main-nav ul{ width:320px; margin:0 auto;}
+.main-nav ul li{ display:inline-block; float:left; margin-left:18px; font-size: 16px; text-align:center;}
+.main-nav ul li a{ color:#fff; font-weight:300;}
+.main-nav ul li a:hover{ text-decoration:underline;}
+.info-section{ background-color: #fff; padding:30px 60px;}
+.info-section h2{ text-align:center; font-size:28px; text-transform:uppercase; letter-spacing:3px;}
+.info-section h2:after{ content:""; width:100px; display:table; clear:both;border-bottom: 3px solid black; position:absolute;left:50%; margin-left:-50px; margin-top:8px;}
+.info-section__description{ font-style: italic; margin-top:20px;}
+.info-section header{ margin-bottom:60px; }
+.info-section header p{ color:#19582E;}
+.whatido__skill--code,.whatido__skill--design,.whatido__skill--product{ height:100px; background-position: center top; background-repeat:no-repeat;}
+.whatido__skill--code{ background-image:url(../img/skill-code.png);}
+.whatido__skill--design{ background-image:url(../img/skill-design.png);}
+.whatido__skill--product{ background-image:url(../img/skill-product.png);}
+.whatido__skill{ height:150px; width:33.3%; float:left; text-align:center; padding-top:130px}
+.whatido__skill p{ margin-top:20px; color:#19582E;}
