@@ -11,7 +11,7 @@ See: http://www.sitepoint.com/web-foundations/doctypes/
     -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Profile</title>
+    <title>Paavo</title>
 
     <!--
     Disables zooming on mobile devices.
@@ -29,6 +29,22 @@ See: http://www.sitepoint.com/web-foundations/doctypes/
     -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="jq/jquery-1.7.2.min.js"></script>
+    <script>
+		$(function(){
+			var num=$('.main-nav').offset().top
+			$(window).scroll(function(e) {
+			
+            if($(this).scrollTop()>=num){
+				$('.main-nav').addClass('main-nav-move')	
+			}else{
+				$('.main-nav').removeClass('main-nav-move')
+		
+			}
+			})
+    	
+        });
+    </script>
     <!--<link href='http://fonts.useso.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>-->
   </head>
   <body>
@@ -75,7 +91,7 @@ See: http://www.sitepoint.com/web-foundations/doctypes/
         </header>
         <ul class="education-experience__list">
           <li>
-            <img src="img/strikingly-logo.png" alt="Strikingly">
+            <img class="Strikingly" src="img/strikingly-logo.png" alt="Strikingly">
             <div class="education-experience__list__description">
               <h3>Strikingly</h3>
               <p class="education-experience__title">Cofounder, 2012 - Present</p>
@@ -83,16 +99,20 @@ See: http://www.sitepoint.com/web-foundations/doctypes/
             </div>
           </li>
           <li>
-            <img src="img/echo-rocket.jpg" alt="Echo Rocket">
+            <img class="Rocket" src="img/echo-rocket.jpg" alt="Echo Rocket">
+             <div class="education-experience__list__description">
             <h3>Freelance Web/Game Developer</h3>
             <p class="education-experience__title">2007 - 2012</p>
             <p class="education-experience__description">EchoRocket was my one-man Flash game studio and web development/design consultancy. I built Spinblaster, Block Knocker, CampusAmp, HireBrite, and more!</p>
+            </div>
           </li>
           <li>
-            <img src="img/u-of-chicago.jpg" alt="">
+            <img class="University" src="img/u-of-chicago.jpg" alt="">
+             <div class="education-experience__list__description">
             <h3>University of Chicago</h3>
             <p class="education-experience__title">BA Economics, 2008-2012</p>
             <p class="education-experience__description">Studying the finer points of firms, markets, finance, decision theory, and supply and demand.</p>
+            </div>
           </li>
         </ul>
       </section>
@@ -103,28 +123,28 @@ See: http://www.sitepoint.com/web-foundations/doctypes/
           <p class="info-section__description">Some pics from my travels!</p>
         </header>
         <ul class="photos__list">
-          <li>
+          <li  class="photos__list_img">
             <img src="img/p01.jpg" alt="">
           </li>
-          <li>
+          <li  class="photos__list_img">
             <img src="img/p02.jpg" alt="">
           </li>
-          <li>
-            <img src="img/p03.jpg" alt="">
+          <li class="photos__list_img">
+			<img src="img/p03.jpg" alt="">
           </li>
-          <li>
+          <li class="photos__list_img">
             <img src="img/p04.jpg" alt="">
           </li>
-          <li>
+          <li class="photos__list_img">
             <img src="img/p05.jpg" alt="">
           </li>
-          <li>
+          <li class="photos__list_img">
             <img src="img/p06.jpg" alt="">
           </li>
-          <li>
+          <li class="photos__list_img">
             <img src="img/p07.jpg" alt="">
           </li>
-          <li>
+          <li class="photos__list_img">
             <img src="img/p08.jpg" alt="">
           </li>
         </ul>
@@ -140,15 +160,15 @@ See: http://www.sitepoint.com/web-foundations/doctypes/
             <p>Facebook</p>
           </li>
           <li>
-            <img src="img/twitter-icon.png" alt="">
+           <a href="#"> <img src="img/twitter-icon.png" alt=""></a>
             <p>Twitter</p>
           </li>
           <li>
-            <img src="img/linkedin-icon.png" alt="">
+            <a href="#"><img src="img/linkedin-icon.png" alt=""></a>
             <p>LinkedIn</p>
           </li>
           <li>
-            <img src="img/email-icon.png" alt="">
+            <a href="#"><img src="img/email-icon.png" alt=""></a>
             <p>Email</p>
           </li>
         </ul>
@@ -158,15 +178,21 @@ See: http://www.sitepoint.com/web-foundations/doctypes/
         <header>
           <h2>Or...Leave a Message</h2>
         </header>
+        
+        <div class="form">
         <form action="">
-          <label for="name">Name</label>
-          <input name="name" id="name" type="text">
-          <label for="email">Email</label>
-          <input name="email" id="email" type="email">
-          <label for="message">Message</label>
-          <textarea name="message" id="message"></textarea>
-          <button type="submit">Submit</button>
-        </form>
+        
+          <div class="email-form-container">
+          <div class="input"><label for="name" class="outside">Name</label>
+          <input name="name" id="name" type="text"></div>
+          <div class="input"><label for="email" class="outside">Email</label>
+          <input name="email" id="email" type="email"><br /></div>
+          <div class="input"><label for="message" class="outside">Message</label>
+          <textarea name="message" id="message"></textarea></div><br />
+          <button type="submit" class="input_button">Submit</button>
+          </div>
+         
+        </form></div>
       </section>
 
     </div>
